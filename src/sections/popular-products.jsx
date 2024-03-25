@@ -15,7 +15,12 @@ const PopularProducts = () => {
       </div>
       <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14">
         {products.map((product) => (
-          <PopularProductCard key={product.name} {...product} />
+          <PopularProductCard
+            key={product.name}
+            imgURL={product.imgURL}
+            name={product.name}
+            price={product.price}
+          />
         ))}
       </div>
     </section>
